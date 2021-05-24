@@ -1,0 +1,185 @@
+.Form {
+  background-color: color(grey--lighter);
+  border: 1px solid color(grey--dark);
+  padding: 2rem;
+  margin-top: 1.625rem;
+
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="text"],
+  button,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  input:read-only {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respondTo(md) {
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    text-align: center;
+  }
+
+  &-heading,
+  &-label {
+    display: block;
+    @include text(color(black--lighter), 1rem, $bold, normal);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+
+    &--checkbox {
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 0.75rem 0 0;
+
+      @include respondTo(xs) {
+        margin-bottom: 1rem;
+      }
+
+      &::before {
+        content: "";
+        position: relative;
+        left: -4px;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        border: 1px solid color(black);
+        transition: border-color 0.2s ease-in;
+      }
+    }
+
+    &--price {
+      display: inline-block;
+    }
+  }
+
+  &-text {
+    display: inline-block;
+    @include text(color(black--lighter), 1rem, $bold, normal);
+  }
+
+  &-input,
+  &-select,
+  &-textarea {
+    font-family: $Fira;
+    @include text(color(black--lighter), 1rem, $normal, normal);
+    background-color: color(white);
+    border: 1px solid color(black--lighter);
+    padding: 0.5rem 1rem;
+    margin: 0;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: color(yellow--dark);
+      transition: border-color 0.2s ease-in;
+    }
+
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    &::placeholder {
+      color: color(grey--dark);
+      /* Firefox */
+      opacity: 1;
+    }
+
+    /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      color: color(grey--dark);
+    }
+
+    /* Microsoft Edge */
+    &::-ms-input-placeholder {
+      color: color(grey--dark);
+    }
+
+    &--small {
+      font-size: 0.875rem;
+      padding: 0.625rem 0.875rem;
+    }
+
+    &--price {
+      width: 5rem;
+    }
+  }
+
+  &-select {
+    width: 11.125rem;
+    background-image: url(./../img/icons/triangle-select.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position: calc(100% - 10px) center;
+    background-size: 12px 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &-checkbox {
+    // Hide due to custom styling
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &:focus + .Form-label--checkbox::before {
+      border-color: color(yellow--dark);
+    }
+
+    &:checked + .Form-label--checkbox::before {
+      content: "";
+      border: 1px solid color(yellow--dark);
+      background: url("./../img/icons/check.svg") no-repeat center color(yellow--dark);
+      background-size: 12px 12px;
+    }
+  }
+
+  &-priceRange {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    // Change Price Range Slider position
+    @include respondTo(lg) {
+      div:nth-child(2) {
+        order: 1;
+      }
+      div:nth-child(1) {
+        order: 2;
+      }
+      div:nth-child(3) {
+        order: 3;
+      }
+    }
+  }
+}

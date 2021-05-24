@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bikes</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <nav class="Nav" role="navigation">
+        <div class="Container">
+          <button class="NavButton" id="js-toggleMobileNav">
+            <span class="NavButton-layer"></span>
+            <span class="NavButton-layer"></span>
+            <span class="NavButton-layer"></span>
+          </button>
+          <div class="Nav-content" id="js-nav">
+            <ul class="Nav-menu">
+              <li>
+                <a href="#" class="Nav-link Nav-link--home">Domů</a>
+              </li>
+              <li>
+                <a href="#" class="Nav-link">Kontakt</a>
+              </li>
+              <li>
+                <a href="#" class="Nav-link">Prodejna</a>
+              </li>
+              <li>
+                <a href="#" class="Nav-link">Obchodní podmínky</a>
+              </li>
+            </ul>
+            <a href="#" class="Nav-link Nav-link--login" id="js-loginLink">Přihlášení</a>
+          </div>
+        </div>
+      </nav>
+      <div class="Container">
+        <div class="Header-content">
+          <img class="Header-logo" src="./img/logos/logo.svg" alt="Logo logo" role="banner" />
+          <div class="Header-actions">
+            <input type="text" class="Header-search" aria-label="Vyhledávání" />
+            <button class="Header-searchButton" role="banner" aria-label="Vyhledat" title="Vyhledat"></button>
+            <a href="#" class="Header-comparison" aria-label="K porovnání" title="K porovnání">
+              <span>K porovnání</span>
+              <span class="Header-comparison-number">5</span>
+            </a>
+            <a href="#" class="Header-cart" aria-label="Košík" title="Košík">
+              <span>1297 Kč</span>
+              <span class="Header-cart-number">3</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="Main" role="main">
+      <div class="Container">
+        <div class="Grid">
+          <div class="Grid-col Grid-col--3 Grid-col--sm-12">
+            <div class="ta-center">
+              <a href="#" class="Categories-toggleLink" id="js-toggleMobileCategories">Zobrazit kategorie</a>
+            </div>
+            <ul class="Categories" id="js-categories">
+              <li>
+                <a href="" class="Categories-link">JÍZDNÍ KOLA</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">ELEKTROKOLA</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">ELEKTROSADY</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">TŘÍKOLKY</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">KOMPONENTY</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">KOLA VT-BIKE</a>
+              </li>
+              <li>
+                <a href="" class="Categories-link">BAZAR</a>
+              </li>
+            </ul>
+          </div>
+          <div class="Grid-col Grid-col--9 Grid-col--sm-12">
+            <h1>JÍZDNÍ KOLA</h1>
+            <form class="Form">
+              <div class="Form-controls">
+                <div class="Form-item md-mb-32">
+                  <h2 class="Form-heading">
+                    <label for="manufacturer" class="Form-label">Výrobce</label>
+                  </h2>
+                  <select name="manufacturer" class="Form-select">
+                    <option value="all">Jakýkoliv výrobce</option>
+                    <option value="cannondale">Cannondale</option>
+                    <option value="merida">Merida</option>
+                    <option value="rock_machine">Rock Machine</option>
+                    <option value="superior">Superior</option>
+                    <option value="trek">Trek</option>
+                  </select>
+                </div>
+                <div class="Form-item">
+                  <h2 class="Form-heading">Cenový rozsah</h2>
+                  <div class="Form-priceRange">
+                    <div>
+                      <label for="price_from" aria-label="Minimální cena" class="Form-label Form-label--price mr-8 lg-ml-8">Od</label>
+                      <input type="text" value="8000" id="price_from" class="Form-input Form-input--price" />
+                      <span class="Form-text ml-8 lg-mr-8">Kč</span>
+                    </div>
+                    <!-- TODO - Price Range Slider  -->
+                    <div class="RangeSlider ml-16 mr-16">TODO - Price Range Slider</div>
+                    <div>
+                      <label for="price_to" aria-label="Maximální cena" class="Form-label Form-label--price mr-8 lg-ml-8">Do</label>
+                      <input type="text" value="31000" id="price_to" class="Form-input Form-input--price" />
+                      <span class="Form-text ml-8 lg-mr-8">Kč</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Form-controls mt-32">
+                <div class="Form-item md-mb-32 xs-mb-16">
+                  <h2 class="Form-heading ta-left md-ta-center">Velikost rámu</h2>
+                  <input class="Form-checkbox" type="checkbox" name="size_16" id="size_16" />
+                  <label class="Form-label Form-label--checkbox" for="size_16">16"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_17" id="size_17" />
+                  <label class="Form-label Form-label--checkbox" for="size_17">17"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_18" id="size_18" />
+                  <label class="Form-label Form-label--checkbox" for="size_18">18"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_19" id="size_19" />
+                  <label class="Form-label Form-label--checkbox" for="size_19">19"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_20" id="size_20" />
+                  <label class="Form-label Form-label--checkbox" for="size_20">20"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_20.5" id="size_20.5" />
+                  <label class="Form-label Form-label--checkbox" for="size_20.5">20,5"</label>
+                  <input class="Form-checkbox" type="checkbox" name="size_21" id="size_21" />
+                  <label class="Form-label Form-label--checkbox" for="size_21">21"</label>
+                </div>
+                <div class="Form-item">
+                  <button class="Button" type="submit">Použít</button>
+                </div>
+              </div>
+            </form>
+            <div class="Products">
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/1.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">CTM REIN 1.0 (27,5") matná petrolejová / oranžová 19"</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--discount">sleva</span>
+              </article>
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/2.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">VT-BIKE SPYDER 24" černá mat / zelená</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--top">top</span>
+              </article>
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/3.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">GALAXY EARLY BIRD 20" ČERNÝ</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--novelty">novinka</span>
+              </article>
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/4.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">GALAXY PYXIS 20" ČERNÁ</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--discount">sleva</span>
+                <span class="ProductCard-label ProductCard-label--top">top</span>
+              </article>
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/5.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">CTM REIN 1.0 (27,5") matná petrolejová / oranžová 19"</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--discount">sleva</span>
+                <span class="ProductCard-label ProductCard-label--top">top</span>
+                <span class="ProductCard-label ProductCard-label--novelty">novinka</span>
+              </article>
+              <article class="ProductCard">
+                <div class="ProductCard-topContent">
+                  <a href="#" class="ProductCard-imageLink">
+                    <img class="ProductCard-image" src="./img/products/bikes/6.jpg" alt="" />
+                  </a>
+                  <h3 class="ProductCard-name">
+                    <a href="#">Dema TIGRA 3 SVĚTLE ŠEDÁ/ČERVENÁ</a>
+                  </h3>
+                </div>
+                <div class="ProductCard-bottomContent">
+                  <span class="ProductCard-price">19 224 Kč</span>
+                  <a href="#" class="Button">koupit</a>
+                </div>
+                <span class="ProductCard-label ProductCard-label--discount">sleva</span>
+              </article>
+            </div>
+            <ul class="Pagination">
+              <li>
+                <a href="#" class="Pagination-link">1</a>
+              </li>
+              <li>
+                <a href="#" class="Pagination-link is-active">2</a>
+              </li>
+              <li>
+                <a href="#" class="Pagination-link">3</a>
+              </li>
+              <li>
+                <a href="#" class="Pagination-link">4</a>
+              </li>
+              <li>
+                <a href="#" class="Pagination-link">5</a>
+              </li>
+              <li>
+                <a href="#" class="Pagination-link">další >></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="Footer" role="contentinfo">
+      <div class="Container">
+        <div class="Footer-content">
+          <small class="Footer-copyright xs-ta-center">© 2021, bootiq.io<br />Všechna práva vyhrazena</small>
+          <img class="Footer-logo" src="./img/logos/shopix_white.svg" alt="Shopix logo" />
+        </div>
+      </div>
+    </footer>
+    <div class="Overlay" id="js-overlay">
+      <form class="Login" id="js-login">
+        <label for="user_email" class="Form-label hiddenSeoFriendly">Email</label>
+        <input type="text" id="user_email" name="user_email" placeholder="email" class="Form-input Form-input--small w100p mb-16" />
+        <label for="user_password" class="Form-label hiddenSeoFriendly">Email</label>
+        <input type="password" id="user_password" name="user_password" placeholder="heslo" class="Form-input Form-input--small w100p mb-16" />
+        <button type="submit" class="Button Button--small w100p mb-24">Přihlásit se</button>
+        <div class="ta-center">
+          <p class="Login-text mb-8">Nemáte ještě účet?</p>
+          <a href="#" class="Login-link">Registrovat se</a>
+        </div>
+        <span class="Login-close" aria-label="Zavřít okno pro přihlášení / registraci" id="js-loginClose"></span>
+      </form>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

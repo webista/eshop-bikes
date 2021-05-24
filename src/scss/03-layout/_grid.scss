@@ -1,0 +1,72 @@
+$cols: 12;
+
+.Grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  &-col {
+    position: relative;
+    padding: 0 15px;
+
+    &--3 {
+      flex: 0 0 percentage(3 / $cols);
+      max-width: percentage(3 / $cols);
+    }
+
+    &--4 {
+      flex: 0 0 percentage(4 / $cols);
+      max-width: percentage(4 / $cols);
+    }
+
+    &--6 {
+      flex: 0 0 percentage(6 / $cols);
+      max-width: percentage(6 / $cols);
+    }
+
+    &--8 {
+      flex: 0 0 percentage(8 / $cols);
+      max-width: percentage(8 / $cols);
+    }
+
+    &--9 {
+      flex: 0 0 percentage(9 / $cols);
+      max-width: percentage(9 / $cols);
+    }
+
+    &--12 {
+      flex: 0 0 percentage(12 / $cols);
+      max-width: percentage(12 / $cols);
+    }
+
+    @include respondTo(md) {
+      &--md-6 {
+        flex: 0 0 percentage(6 / $cols);
+        max-width: percentage(6 / $cols);
+      }
+    }
+
+    @include respondTo(md) {
+      &--md-12 {
+        flex: 0 0 percentage(12 / $cols);
+        max-width: percentage(12 / $cols);
+      }
+    }
+
+    @include respondTo(sm) {
+      &--sm-12 {
+        flex: 0 0 percentage(12 / $cols);
+        max-width: percentage(12 / $cols);
+      }
+    }
+
+    @include respondTo(xs) {
+      &--xs-12 {
+        flex: 0 0 percentage(12 / $cols);
+        max-width: percentage(12 / $cols);
+      }
+    }
+  }
+}

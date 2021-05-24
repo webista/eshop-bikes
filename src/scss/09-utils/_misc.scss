@@ -1,0 +1,64 @@
+.pos-rel {
+  position: relative;
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+// Display
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.xs-d-none {
+  @include respondTo(xs) {
+    display: none;
+  }
+}
+
+.hiddenSeoFriendly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+// Text formatting
+.ta-center {
+  text-align: center;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.md-ta-center {
+  @include respondTo(md) {
+    text-align: center;
+  }
+}
+
+.sm-ta-center {
+  @include respondTo(sm) {
+    text-align: center;
+  }
+}
+
+.xs-ta-center {
+  @include respondTo(xs) {
+    text-align: center;
+  }
+}

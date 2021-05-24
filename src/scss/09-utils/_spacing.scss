@@ -1,0 +1,95 @@
+// Generate margin and padding classes
+@each $space in $spacings {
+  .mt-#{$space} {
+    margin-top: #{$space}px;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{$space}px;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}px;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}px;
+  }
+
+  .lg-mt-#{$space} {
+    @include respondTo(lg) {
+      margin-top: #{$space}px;
+    }
+  }
+  .lg-mb-#{$space} {
+    @include respondTo(lg) {
+      margin-bottom: #{$space}px;
+    }
+  }
+  .lg-ml-#{$space} {
+    @include respondTo(lg) {
+      margin-left: #{$space}px;
+    }
+  }
+  .lg-mr-#{$space} {
+    @include respondTo(lg) {
+      margin-right: #{$space}px;
+    }
+  }
+
+  .md-mt-#{$space} {
+    @include respondTo(md) {
+      margin-top: #{$space}px;
+    }
+  }
+  .md-mb-#{$space} {
+    @include respondTo(md) {
+      margin-bottom: #{$space}px;
+    }
+  }
+  .md-ml-#{$space} {
+    @include respondTo(md) {
+      margin-left: #{$space}px;
+    }
+  }
+  .md-mr-#{$space} {
+    @include respondTo(md) {
+      margin-right: #{$space}px;
+    }
+  }
+
+  .xs-mt-#{$space} {
+    @include respondTo(xs) {
+      margin-top: #{$space}px !important;
+    }
+  }
+  .xs-mb-#{$space} {
+    @include respondTo(xs) {
+      margin-bottom: #{$space}px !important;
+    }
+  }
+  .xs-ml-#{$space} {
+    @include respondTo(xs) {
+      margin-left: #{$space}px !important;
+    }
+  }
+  .xs-mr-#{$space} {
+    @include respondTo(xs) {
+      margin-right: #{$space}px !important;
+    }
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space}px;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}px;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}px;
+  }
+  .pr-#{$space} {
+    padding-right: #{$space}px;
+  }
+}
+
+.w100p {
+  width: 100%;
+}

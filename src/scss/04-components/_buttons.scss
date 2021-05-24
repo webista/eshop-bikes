@@ -1,0 +1,84 @@
+.Button {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: color(black);
+  border: 1px solid color(black);
+  @include text(color(white), 1rem, $normal, normal);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: color(yellow--dark);
+    border-color: color(yellow--dark);
+  }
+
+  &--small {
+    font-size: 0.875rem;
+  }
+}
+
+.NavButton {
+  display: none;
+
+  @include respondTo(xs) {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    z-index: z(navButton);
+
+    &-layer {
+      width: 30px;
+      height: 4px;
+      background-color: $colorBlack;
+      border-radius: 2px;
+      transition: transform 0.4s ease;
+
+      &:first-of-type,
+      &:last-of-type {
+        position: absolute;
+        left: 5px;
+        width: 30px;
+        height: 4px;
+        background-color: $colorBlack;
+        border-radius: 4px;
+        transition: transform 0.4s ease;
+      }
+
+      &:first-of-type {
+        top: 10px;
+      }
+
+      &:last-of-type {
+        bottom: 10px;
+      }
+    }
+
+    &.is-active {
+      .NavButton-layer {
+        &:first-of-type {
+          transform-origin: top;
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+        &:nth-of-type(2) {
+          transform: scale(0);
+        }
+        &:last-of-type {
+          transform-origin: bottom;
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
+}

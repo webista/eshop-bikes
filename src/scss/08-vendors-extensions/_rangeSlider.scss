@@ -1,0 +1,9 @@
+.RangeSlider {
+  color: color(grey--dark);
+  font-style: italic;
+
+  @include respondTo(lg) {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
+}

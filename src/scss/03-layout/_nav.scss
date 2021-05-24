@@ -1,0 +1,145 @@
+.Nav {
+  background-color: color(black--lighter);
+  padding: 1.25rem 0;
+
+  @include respondTo(xs) {
+    padding: 0;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respondTo(xs) {
+      display: none;
+
+      &.is-active {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 4rem);
+        background-color: color(black--lighter);
+        padding: 2rem;
+        overflow: scroll;
+        z-index: z(mobileNav);
+        animation-name: fadeInRight;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include respondTo(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    position: relative;
+    @include text(color(white), 0.875rem, $normal, normal);
+    text-decoration: none;
+    margin-right: 2.5rem;
+
+    @include respondTo(sm) {
+      margin-right: 2rem;
+    }
+
+    @include respondTo(xs) {
+      font-size: 1.25rem;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: color(white);
+      left: 0px;
+      bottom: -2px;
+      transition: all 0.15s ease;
+      transform: scaleX(0);
+
+      @include respondTo(xs) {
+        height: 2px;
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &--home {
+      padding-left: 1.75rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 0px;
+        bottom: 2px;
+        width: 1rem;
+        height: 1rem;
+        background: url(./../img/icons/home.svg) no-repeat center / contain transparent;
+
+        @include respondTo(xs) {
+          bottom: 5px;
+        }
+      }
+    }
+
+    &--login {
+      padding-left: 1.75rem;
+      margin-right: 0;
+
+      @include respondTo(xs) {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid color(grey--dark);
+        padding-bottom: 1.25rem;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 0px;
+        bottom: 2px;
+        width: 1rem;
+        height: 1rem;
+        background: url(./../img/icons/login.svg) no-repeat center / contain transparent;
+
+        @include respondTo(xs) {
+          bottom: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+$breakpoints: (
+  xxs: 360px,
+  xs: 576px,
+  sm: 800px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1400px
+);
+
+$colors: (
+  black: $colorBlack,
+  black--lighter: $colorBlackLighter,
+  grey: $colorGrey,
+  grey--dark: $colorGreyDark,
+  grey--lighter: $colorGreyLighter,
+  white: $colorWhite,
+  yellow--dark: $colorYellowDark
+);
+
+$spacings: (4, 8, 12, 16, 24, 32, 40);
+
+$z-indexes: (
+  default: 1,
+  productLabel: 2,
+  searchButton: 10,
+  mobileNav: 100,
+  navButton: 101,
+  overlay: 1000,
+  login: 9999
+);

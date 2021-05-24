@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html {
+  font-family: $Fira;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  @include text(color(black), 2rem, $bold, 1.875rem);
+  text-transform: uppercase;
+  margin-top: 3.375rem;
+
+  @include respondTo(md) {
+    font-size: 1.75rem;
+    line-height: normal;
+    margin-top: 2rem;
+  }
+
+  @include respondTo(xs) {
+  }
+}
+
+p {
+  @include text(color(black--lighter), 1rem, $normal, normal);
+  margin-top: 1em;
+}

@@ -1,0 +1,28 @@
+.Footer {
+  background-color: color(black);
+  padding: 1.25rem 0;
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respondTo(xs) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  &-copyright {
+    display: block;
+    @include text(color(white), 0.875rem, $normal, normal);
+  }
+
+  &-logo {
+    @include respondTo(xs) {
+      margin-bottom: 1rem;
+    }
+  }
+}

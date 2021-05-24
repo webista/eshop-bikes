@@ -1,0 +1,56 @@
+.Login {
+  display: none;
+  position: relative;
+  width: 20rem;
+  border: 1px solid color(black--lighter);
+  background-color: color(white);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  padding: 3.5rem 1rem 1.5rem;
+
+  @include respondTo(xxs) {
+    width: 18.75rem;
+  }
+
+  &.is-active {
+    display: block;
+    animation-name: fadeInDown;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+
+  &-text {
+    @include text(color(black--lighter), 1rem, $normal, normal);
+  }
+
+  &-link {
+    @include text(color(black--lighter), 1rem, $bold, normal);
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: color(yellow--dark);
+      text-decoration: underline;
+    }
+  }
+
+  &-close {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: url(./../img/icons/close.svg) no-repeat center center / contain transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: 1px solid color(black--lighter);
+      outline-offset: 2px;
+    }
+  }
+}

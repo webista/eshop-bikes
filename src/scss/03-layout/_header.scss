@@ -1,0 +1,231 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: $Roboto;
+
+  @include respondTo(xs) {
+    flex-direction: column-reverse;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: color(white);
+    padding: 1rem 0;
+
+    @include respondTo(sm) {
+      padding: 0;
+    }
+  }
+
+  &-logo {
+    margin: 1rem 2rem 1rem 0;
+
+    @include respondTo(md) {
+      width: 8rem;
+      height: auto;
+    }
+
+    @include respondTo(xs) {
+      width: 6.25rem;
+    }
+
+    @include respondTo(xxs) {
+      margin-right: 1rem;
+    }
+  }
+
+  &-actions {
+    @include respondTo(xs) {
+      margin-right: 3.125rem;
+    }
+  }
+
+  &-search {
+    width: 29.125rem;
+    @include text(color(black), 1rem, $normal, normal);
+    border: 1px solid color(black);
+    padding: 0.75rem 3.5rem 0.75rem 1rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: color(yellow--dark);
+      transition: border-color 0.2s ease-in;
+    }
+
+    @include respondTo(lg) {
+      width: 26rem;
+    }
+
+    @include respondTo(md) {
+      width: 20rem;
+    }
+
+    @include respondTo(sm) {
+      display: none;
+    }
+  }
+
+  &-searchButton {
+    display: inline-block;
+    width: 1.375rem;
+    height: 1.375rem;
+    background: url(./../img/icons/search.svg) no-repeat center center / contain transparent;
+    transform: translate(-40px, 5px);
+    transition: transform 0.3s ease;
+    z-index: z(searchButton);
+
+    @include respondTo(sm) {
+      transform: translate(0px, 3px);
+    }
+
+    &:active,
+    &:hover {
+      transform: translate(-40px, 5px) scale(1.2);
+
+      @include respondTo(sm) {
+        transform: translate(0px, 3px);
+      }
+    }
+
+    &:focus {
+      outline: 1px solid color(black--lighter);
+      outline-offset: 2px;
+    }
+  }
+
+  &-comparison {
+    position: relative;
+    @include text(color(black--lighter), 1rem, $normal, normal);
+    text-decoration: none;
+    padding-left: 2rem;
+    margin-left: 3.375rem;
+
+    @include respondTo(lg) {
+      margin-left: 2rem;
+    }
+
+    @include respondTo(xxs) {
+      margin-left: 1rem;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 1.563rem;
+      height: 1.625rem;
+      background: url(./../img/icons/scales.svg) no-repeat center / contain transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: color(black--lighter);
+      left: 0px;
+      bottom: -2px;
+      transition: all 0.15s ease;
+      transform: scaleX(0);
+
+      @include respondTo(xs) {
+        height: 2px;
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &-number {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      @include text(color(black), 0.875rem, $normal, normal);
+    }
+
+    @include respondTo(md) {
+      span {
+        &:first-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-cart {
+    position: relative;
+    @include text(color(black--lighter), 1rem, $bold, normal);
+    text-decoration: none;
+    padding-left: 2rem;
+    margin-left: 3.375rem;
+
+    @include respondTo(lg) {
+      margin-left: 2rem;
+    }
+
+    @include respondTo(xxs) {
+      margin-left: 1rem;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 1.5rem;
+      height: 1.313rem;
+      background: url(./../img/icons/cart.svg) no-repeat center / contain transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: color(black--lighter);
+      left: 0px;
+      bottom: -2px;
+      transition: all 0.15s ease;
+      transform: scaleX(0);
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &-number {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      @include text(color(black), 0.875rem, $normal, normal);
+    }
+
+    @include respondTo(md) {
+      span {
+        &:first-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.ProductCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: calc(100% * 1 / 3 - 30px);
+  max-width: calc(100% * 1 / 3 - 30px);
+  padding: 2rem 0.5rem 1rem;
+  margin: 0 15px 2.75rem 15px;
+
+  @include respondTo(md) {
+    flex-basis: calc(100% * 1 / 2 - 30px);
+    max-width: calc(100% * 1 / 2 - 30px);
+  }
+
+  @include respondTo(xs) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  &-topContent {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  &-imageLink {
+    display: block;
+  }
+
+  &-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  &-label {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    @include text(color(white), 0.75rem, $normal, normal);
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    z-index: z(productLabel);
+
+    &:first-of-type {
+      top: 1rem;
+    }
+
+    &:nth-of-type(2) {
+      top: 2.825rem;
+    }
+
+    &:nth-of-type(3) {
+      top: 4.6875rem;
+    }
+
+    &--discount {
+      background-color: #305858;
+    }
+
+    &--top {
+      background-color: #c97141;
+    }
+
+    &--novelty {
+      background-color: #c19731;
+    }
+  }
+
+  &-name {
+    @include text(color(black--lighter), 1rem, $bold, normal);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+    a {
+      text-decoration: none;
+
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-bottomContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid color(grey--dark);
+    padding-top: 1rem;
+
+    @include respondTo(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-price {
+    @include text(#ff0000, 1.375rem, $bold, 1.688rem);
+
+    @include respondTo(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+}
