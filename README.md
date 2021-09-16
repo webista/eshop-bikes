@@ -1,5 +1,5 @@
 # Eshop - Bikes
 
-HTML, Sass and little JS training as sample of eshop UI
+HTML, Sass and little JS training as sample of eshop UI.
 
-[See it here](https://webista.github.io/eshop-bikes/)
+[See it here](https://webista.github.io/eshop-bikes/).
