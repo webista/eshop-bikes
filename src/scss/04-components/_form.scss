@@ -1,6 +1,6 @@
 .Form {
-  background-color: color(grey--lighter);
-  border: 1px solid color(grey--dark);
+  background-color: color(grey--light);
+  border: 1px solid $colorGrey--dark;
   padding: 2rem;
   margin-top: 1.625rem;
 
@@ -41,7 +41,7 @@
   &-heading,
   &-label {
     display: block;
-    @include text(color(black--lighter), 1rem, $bold, normal);
+    @include text($colorBlack--light, 1rem, $bold, normal);
     text-transform: uppercase;
     margin-bottom: 0.75rem;
 
@@ -63,7 +63,7 @@
         vertical-align: middle;
         width: 18px;
         height: 18px;
-        border: 1px solid color(black);
+        border: 1px solid $colorBlack;
         transition: border-color 0.2s ease-in;
       }
     }
@@ -75,42 +75,28 @@
 
   &-text {
     display: inline-block;
-    @include text(color(black--lighter), 1rem, $bold, normal);
+    @include text($colorBlack--light, 1rem, $bold, normal);
   }
 
   &-input,
   &-select,
   &-textarea {
     font-family: $Fira;
-    @include text(color(black--lighter), 1rem, $normal, normal);
-    background-color: color(white);
-    border: 1px solid color(black--lighter);
+    @include text($colorBlack--light, 1rem, $normal, normal);
+    background-color: $colorWhite;
+    border: 1px solid $colorBlack--light;
     padding: 0.5rem 1rem;
     margin: 0;
 
-    &:active,
     &:focus,
-    &:hover {
-      border-color: color(yellow--dark);
+    &:hover,
+    &:active {
+      border-color: $colorYellow;
       transition: border-color 0.2s ease-in;
+      outline: none;
     }
 
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    &::placeholder {
-      color: color(grey--dark);
-      /* Firefox */
-      opacity: 1;
-    }
-
-    /* Internet Explorer 10-11 */
-    &:-ms-input-placeholder {
-      color: color(grey--dark);
-    }
-
-    /* Microsoft Edge */
-    &::-ms-input-placeholder {
-      color: color(grey--dark);
-    }
+    @include placeholder($colorGrey--dark);
 
     &--small {
       font-size: 0.875rem;
@@ -151,13 +137,13 @@
     width: 1px;
 
     &:focus + .Form-label--checkbox::before {
-      border-color: color(yellow--dark);
+      border-color: $colorYellow;
     }
 
     &:checked + .Form-label--checkbox::before {
       content: "";
-      border: 1px solid color(yellow--dark);
-      background: url("./../img/icons/check.svg") no-repeat center color(yellow--dark);
+      border: 1px solid $colorYellow;
+      background: url("./../img/icons/check.svg") no-repeat center $colorYellow;
       background-size: 12px 12px;
     }
   }

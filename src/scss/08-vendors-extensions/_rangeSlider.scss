@@ -1,5 +1,5 @@
 .RangeSlider {
-  color: color(grey--dark);
+  color: $colorGrey--dark;
   font-style: italic;
 
   @include respondTo(lg) {

@@ -3,22 +3,22 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  border-top: 1px solid color(grey--dark);
+  border-top: 1px solid $colorGrey--dark;
   padding-top: 1rem;
 
   &-link {
-    @include text(color(black--lighter), 0.875rem, $normal, normal);
+    @include text($colorBlack--light, 0.875rem, $normal, normal);
     text-decoration: none;
     padding: 0.25rem 0.5rem;
 
-    &:active,
+    &:focus,
     &:hover,
-    &:focus {
+    &:active {
       text-decoration: underline;
     }
 
     &.is-active {
-      border: 1px solid color(black--lighter);
+      border: 1px solid $colorBlack--light;
     }
   }
 

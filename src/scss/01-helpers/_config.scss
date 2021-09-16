@@ -9,15 +9,15 @@ $breakpoints: (
 
 $colors: (
   black: $colorBlack,
-  black--lighter: $colorBlackLighter,
+  black--light: $colorBlack--light,
   grey: $colorGrey,
-  grey--dark: $colorGreyDark,
-  grey--lighter: $colorGreyLighter,
+  grey--dark: $colorGrey--dark,
+  grey--light: $colorGrey--light,
   white: $colorWhite,
-  yellow--dark: $colorYellowDark
+  yellow: $colorYellow
 );
 
-$spacings: (4, 8, 12, 16, 24, 32, 40);
+$spacings: (40, 32, 24, 16, 12, 8, 4);
 
 $z-indexes: (
   default: 1,

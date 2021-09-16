@@ -7,6 +7,13 @@
   @return null;
 }
 
+@function rem($size) {
+  $size: if(unitless($size), $size * 1px, $size);
+  $remSize: ($size / 16px) * 1rem;
+
+  @return $remSize;
+}
+
 @function z($key) {
   @if map-has-key($z-indexes, $key) {
     @return map-get($z-indexes, $key);

@@ -1,5 +1,5 @@
 .Footer {
-  background-color: color(black);
+  background-color: $colorBlack;
   padding: 1.25rem 0;
 
   &-content {
@@ -17,7 +17,7 @@
 
   &-copyright {
     display: block;
-    @include text(color(white), 0.875rem, $normal, normal);
+    @include text($colorWhite, 0.875rem, $normal, normal);
   }
 
   &-logo {

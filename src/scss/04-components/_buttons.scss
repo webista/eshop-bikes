@@ -2,9 +2,9 @@
   position: relative;
   display: inline-block;
   vertical-align: bottom;
-  background-color: color(black);
-  border: 1px solid color(black);
-  @include text(color(white), 1rem, $normal, normal);
+  background-color: $colorBlack;
+  border: 1px solid $colorBlack;
+  @include text($colorWhite, 1rem, $normal, normal);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -13,8 +13,9 @@
 
   &:hover,
   &:focus {
-    background-color: color(yellow--dark);
-    border-color: color(yellow--dark);
+    background-color: $colorYellow;
+    border-color: $colorYellow;
+    outline: none;
   }
 
   &--small {
@@ -37,6 +38,11 @@
     width: 40px;
     height: 40px;
     z-index: z(navButton);
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
 
     &-layer {
       width: 30px;

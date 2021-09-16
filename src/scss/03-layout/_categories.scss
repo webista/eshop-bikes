@@ -25,7 +25,7 @@
     @include respondTo(sm) {
       position: relative;
       display: inline-block;
-      @include text(color(black--lighter), 1.125rem, $normal, normal);
+      @include text($colorBlack--light, 1.125rem, $normal, normal);
       text-decoration: none;
       margin-top: 1.625rem;
 
@@ -39,7 +39,7 @@
         bottom: 6px;
         border-style: solid;
         border-width: 4px 0 4px 6px;
-        border-color: transparent transparent transparent color(black--lighter);
+        border-color: transparent transparent transparent $colorBlack--light;
       }
     }
   }
@@ -47,7 +47,7 @@
   &-link {
     position: relative;
     display: inline-block;
-    @include text(color(black--lighter), 1.125rem, $bold, normal);
+    @include text($colorBlack--light, 1.125rem, $bold, normal);
     text-decoration: none;
     text-transform: uppercase;
     padding-left: 1rem;
@@ -56,9 +56,6 @@
 
     @include respondTo(md) {
       font-size: 1rem;
-    }
-
-    @include respondTo(xs) {
     }
 
     &::before {
@@ -71,7 +68,7 @@
       bottom: 7px;
       border-style: solid;
       border-width: 4px 0 4px 6px;
-      border-color: transparent transparent transparent color(black--lighter);
+      border-color: transparent transparent transparent $colorBlack--light;
     }
 
     &::after {
@@ -79,22 +76,22 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: color(yellow--dark);
+      background-color: $colorYellow;
       left: 0px;
       bottom: -2px;
       transition: all 0.15s ease;
       transform: scaleX(0);
     }
 
-    &:active,
+    &:focus,
     &:hover,
-    &:focus {
-      color: color(yellow--dark);
+    &:active {
+      color: $colorYellow;
 
       &::before {
-        border-color: transparent transparent transparent color(yellow--dark);
+        border-color: transparent transparent transparent $colorYellow;
         animation-name: fadeOutRight;
-        animation-duration: 0.3s;
+        animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
         animation-direction: alternate;
         animation-fill-mode: forwards;

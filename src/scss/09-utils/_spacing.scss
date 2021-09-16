@@ -1,95 +1,217 @@
 // Generate margin and padding classes
 @each $space in $spacings {
-  .mt-#{$space} {
+  .u-mt-#{$space} {
     margin-top: #{$space}px;
   }
-  .mb-#{$space} {
+  .u-mb-#{$space} {
     margin-bottom: #{$space}px;
   }
-  .ml-#{$space} {
+  .u-ml-#{$space} {
     margin-left: #{$space}px;
   }
-  .mr-#{$space} {
+  .u-mr-#{$space} {
     margin-right: #{$space}px;
   }
 
-  .lg-mt-#{$space} {
+  .u-lg-mt-#{$space} {
     @include respondTo(lg) {
       margin-top: #{$space}px;
     }
   }
-  .lg-mb-#{$space} {
+  .u-lg-mb-#{$space} {
     @include respondTo(lg) {
       margin-bottom: #{$space}px;
     }
   }
-  .lg-ml-#{$space} {
+  .u-lg-ml-#{$space} {
     @include respondTo(lg) {
       margin-left: #{$space}px;
     }
   }
-  .lg-mr-#{$space} {
+  .u-lg-mr-#{$space} {
     @include respondTo(lg) {
       margin-right: #{$space}px;
     }
   }
 
-  .md-mt-#{$space} {
+  .u-md-mt-#{$space} {
     @include respondTo(md) {
       margin-top: #{$space}px;
     }
   }
-  .md-mb-#{$space} {
+  .u-md-mb-#{$space} {
     @include respondTo(md) {
       margin-bottom: #{$space}px;
     }
   }
-  .md-ml-#{$space} {
+  .u-md-ml-#{$space} {
     @include respondTo(md) {
       margin-left: #{$space}px;
     }
   }
-  .md-mr-#{$space} {
+  .u-md-mr-#{$space} {
     @include respondTo(md) {
       margin-right: #{$space}px;
     }
   }
 
-  .xs-mt-#{$space} {
-    @include respondTo(xs) {
-      margin-top: #{$space}px !important;
+  .u-sm-mt-#{$space} {
+    @include respondTo(sm) {
+      margin-top: #{$space}px;
     }
   }
-  .xs-mb-#{$space} {
-    @include respondTo(xs) {
-      margin-bottom: #{$space}px !important;
+  .u-sm-mb-#{$space} {
+    @include respondTo(sm) {
+      margin-bottom: #{$space}px;
     }
   }
-  .xs-ml-#{$space} {
-    @include respondTo(xs) {
-      margin-left: #{$space}px !important;
+  .u-sm-ml-#{$space} {
+    @include respondTo(sm) {
+      margin-left: #{$space}px;
     }
   }
-  .xs-mr-#{$space} {
-    @include respondTo(xs) {
-      margin-right: #{$space}px !important;
+  .u-sm-mr-#{$space} {
+    @include respondTo(sm) {
+      margin-right: #{$space}px;
     }
   }
 
-  .pt-#{$space} {
+  .u-xs-mt-#{$space} {
+    @include respondTo(xs) {
+      margin-top: #{$space}px;
+    }
+  }
+  .u-xs-mb-#{$space} {
+    @include respondTo(xs) {
+      margin-bottom: #{$space}px;
+    }
+  }
+  .u-xs-ml-#{$space} {
+    @include respondTo(xs) {
+      margin-left: #{$space}px;
+    }
+  }
+  .u-xs-mr-#{$space} {
+    @include respondTo(xs) {
+      margin-right: #{$space}px;
+    }
+  }
+
+  .u-xxs-mt-#{$space} {
+    @include respondTo(xs) {
+      margin-top: #{$space}px;
+    }
+  }
+  .u-xxs-mb-#{$space} {
+    @include respondTo(xs) {
+      margin-bottom: #{$space}px;
+    }
+  }
+  .u-xxs-ml-#{$space} {
+    @include respondTo(xs) {
+      margin-left: #{$space}px;
+    }
+  }
+  .u-xxs-mr-#{$space} {
+    @include respondTo(xs) {
+      margin-right: #{$space}px;
+    }
+  }
+
+  .u-pt-#{$space} {
     padding-top: #{$space}px;
   }
-  .pb-#{$space} {
+  .u-pb-#{$space} {
     padding-bottom: #{$space}px;
   }
-  .pl-#{$space} {
+  .u-pl-#{$space} {
     padding-left: #{$space}px;
   }
-  .pr-#{$space} {
+  .u-pr-#{$space} {
     padding-right: #{$space}px;
   }
-}
 
-.w100p {
-  width: 100%;
+  .u-md-pt-#{$space} {
+    @include respondTo(md) {
+      padding-top: #{$space}px;
+    }
+  }
+  .u-md-pb-#{$space} {
+    @include respondTo(md) {
+      padding-bottom: #{$space}px;
+    }
+  }
+  .u-md-pl-#{$space} {
+    @include respondTo(md) {
+      padding-left: #{$space}px;
+    }
+  }
+  .u-md-pr-#{$space} {
+    @include respondTo(md) {
+      padding-right: #{$space}px;
+    }
+  }
+
+  .u-sm-pt-#{$space} {
+    @include respondTo(sm) {
+      padding-top: #{$space}px;
+    }
+  }
+  .u-sm-pb-#{$space} {
+    @include respondTo(sm) {
+      padding-bottom: #{$space}px;
+    }
+  }
+  .u-sm-pl-#{$space} {
+    @include respondTo(sm) {
+      padding-left: #{$space}px;
+    }
+  }
+  .u-sm-pr-#{$space} {
+    @include respondTo(sm) {
+      padding-right: #{$space}px;
+    }
+  }
+
+  .u-xs-pt-#{$space} {
+    @include respondTo(xs) {
+      padding-top: #{$space}px;
+    }
+  }
+  .u-xs-pb-#{$space} {
+    @include respondTo(xs) {
+      padding-bottom: #{$space}px;
+    }
+  }
+  .u-xs-pl-#{$space} {
+    @include respondTo(xs) {
+      padding-left: #{$space}px;
+    }
+  }
+  .u-xs-pr-#{$space} {
+    @include respondTo(xs) {
+      padding-right: #{$space}px;
+    }
+  }
+
+  .u-xxs-pt-#{$space} {
+    @include respondTo(xs) {
+      padding-top: #{$space}px;
+    }
+  }
+  .u-xxs-pb-#{$space} {
+    @include respondTo(xs) {
+      padding-bottom: #{$space}px;
+    }
+  }
+  .u-xxs-pl-#{$space} {
+    @include respondTo(xs) {
+      padding-left: #{$space}px;
+    }
+  }
+  .u-xxs-pr-#{$space} {
+    @include respondTo(xs) {
+      padding-right: #{$space}px;
+    }
+  }
 }

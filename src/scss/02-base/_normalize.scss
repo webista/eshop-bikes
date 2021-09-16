@@ -2,6 +2,8 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a img {
@@ -103,4 +105,17 @@ textarea {
   &:focus {
     outline: none;
   }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

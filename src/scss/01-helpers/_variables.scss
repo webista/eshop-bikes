@@ -1,11 +1,11 @@
 // Colors
 $colorBlack: #000000;
-$colorBlackLighter: #262626;
+$colorBlack--light: #262626;
 $colorGrey: #f8f8f8;
-$colorGreyDark: #707070;
-$colorGreyLighter: #fbfbfb;
+$colorGrey--dark: #707070;
+$colorGrey--light: #fbfbfb;
 $colorWhite: #ffffff;
-$colorYellowDark: #c19731;
+$colorYellow: #c19731;
 
 // Fonts
 $Fira: Fira Sans, Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -63,22 +63,3 @@ $easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 $easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-// Media queries
-$mq-desktop-1920-max: "only screen and (max-width: 1920px)";
-$mq-desktop-1366-max: "only screen and (max-width: 1366px)";
-$mq-tablet-1024-max: "only screen and (max-width: 1024px)";
-$mq-tablet-960-max: "only screen and (max-width: 960px)";
-$mq-tablet-800-max: "only screen and (max-width: 800px)";
-$mq-tablet-768-max: "only screen and (max-width: 768px)";
-$mq-phone-640-max: "only screen and (max-width: 640px)";
-$mq-phone-480-max: "only screen and (max-width: 480px)";
-$mq-phone-375-max: "only screen and (max-width: 375px)";
-$mq-phone-320-max: "only screen and (max-width: 320px)";
-$mq-phone-landscape: "only screen and (min-device-width: 375px) and (max-device-width: 960px) and (orientation: landscape)";
-
-// $mq-xs: "only screen and (max-width: 576px)";
-// $mq-sm: "only screen and (max-width: 768px)";
-// $mq-md: "only screen and (max-width: 992px)";
-// $mq-lg: "only screen and (max-width: 1200px)";
-// $mq-xl: "only screen and (max-width: 1400px)";

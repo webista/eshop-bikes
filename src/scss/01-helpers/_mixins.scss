@@ -26,21 +26,29 @@
   filter: gray;
 }
 
-@mixin hiddenSeoFriendly() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
 @mixin imgResponsive($display: block) {
   display: $display;
   max-width: 100%;
   height: auto;
+}
+
+@mixin placeholder($color) {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  &::placeholder {
+    color: $color;
+    /* Firefox */
+    opacity: 1;
+  }
+
+  /* Internet Explorer 10-11 */
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  /* Microsoft Edge */
+  &::-ms-input-placeholder {
+    color: $color;
+  }
 }
 
 @mixin resetPosAbs() {
@@ -62,7 +70,18 @@
   }
 }
 
-@mixin text($fontColor: #000, $fontSize: 1rem, $fontWeight: normal, $lineHeight: 1.5rem) {
+@mixin srOnly() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+@mixin text($fontColor: $colorBlack, $fontSize: 1rem, $fontWeight: $normal, $lineHeight: 1.5rem) {
   color: $fontColor;
   font-size: $fontSize;
   font-weight: $fontWeight;
