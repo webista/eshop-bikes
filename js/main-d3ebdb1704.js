@@ -1,5 +1,5 @@
 /**
- * Bikes
+ * Sample eshop UI
  * @author Ondrej Kucera <ondrej@webista.cz>
  */
 "use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("js-toggleMobileNav"),t=document.getElementById("js-nav");e.addEventListener("click",function(){e.classList.toggle("is-active"),t.classList.toggle("is-active")});var n=document.getElementById("js-toggleMobileCategories"),s=document.getElementById("js-categories");n.addEventListener("click",function(e){e.preventDefault(),n.classList.toggle("is-active"),s.classList.toggle("is-active")});function i(){d.classList.remove("is-active"),a.classList.remove("is-active")}var c=document.getElementById("js-loginLink"),a=document.getElementById("js-login"),o=document.getElementById("js-loginClose"),d=document.getElementById("js-overlay");c.addEventListener("click",function(e){e.preventDefault(),e.stopPropagation(),d.classList.add("is-active"),a.classList.add("is-active"),d.classList.contains("is-active")&&d.addEventListener("click",function(e){e.stopPropagation(),"js-overlay"===e.target.id&&i()})}),o.addEventListener("click",function(){i()}),document.addEventListener("keydown",function(e){"Escape"===e.key&&i()})});
