@@ -2,4 +2,4 @@
 
 HTML, Sass and little JS training as sample of eshop UI
 
-[See it here](https://webista.github.io/eshop-bikes/).
+<a href="https://webista.github.io/eshop-bikes/" target="_blank">See it here</a>
