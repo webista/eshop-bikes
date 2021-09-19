@@ -1,4 +1,4 @@
-// Generate margin and padding classes
+// Margin and padding classes
 @each $space in $spacings {
   .u-mt-#{$space} {
     margin-top: #{$space}px;
@@ -12,112 +12,77 @@
   .u-mr-#{$space} {
     margin-right: #{$space}px;
   }
+}
 
-  .u-lg-mt-#{$space} {
-    @include respondTo(lg) {
+@include respondTo(md) {
+  @each $space in $spacings {
+    .u-md-mt-#{$space} {
       margin-top: #{$space}px;
     }
-  }
-  .u-lg-mb-#{$space} {
-    @include respondTo(lg) {
+    .u-md-mb-#{$space} {
       margin-bottom: #{$space}px;
     }
-  }
-  .u-lg-ml-#{$space} {
-    @include respondTo(lg) {
+    .u-md-ml-#{$space} {
       margin-left: #{$space}px;
     }
-  }
-  .u-lg-mr-#{$space} {
-    @include respondTo(lg) {
+    .u-md-mr-#{$space} {
       margin-right: #{$space}px;
     }
   }
+}
 
-  .u-md-mt-#{$space} {
-    @include respondTo(md) {
+@include respondTo(sm) {
+  @each $space in $spacings {
+    .u-sm-mt-#{$space} {
       margin-top: #{$space}px;
     }
-  }
-  .u-md-mb-#{$space} {
-    @include respondTo(md) {
+    .u-sm-mb-#{$space} {
       margin-bottom: #{$space}px;
     }
-  }
-  .u-md-ml-#{$space} {
-    @include respondTo(md) {
+    .u-sm-ml-#{$space} {
       margin-left: #{$space}px;
     }
-  }
-  .u-md-mr-#{$space} {
-    @include respondTo(md) {
+    .u-sm-mr-#{$space} {
       margin-right: #{$space}px;
     }
   }
+}
 
-  .u-sm-mt-#{$space} {
-    @include respondTo(sm) {
+@include respondTo(xs) {
+  @each $space in $spacings {
+    .u-xs-mt-#{$space} {
       margin-top: #{$space}px;
     }
-  }
-  .u-sm-mb-#{$space} {
-    @include respondTo(sm) {
+    .u-xs-mb-#{$space} {
       margin-bottom: #{$space}px;
     }
-  }
-  .u-sm-ml-#{$space} {
-    @include respondTo(sm) {
+    .u-xs-ml-#{$space} {
       margin-left: #{$space}px;
     }
-  }
-  .u-sm-mr-#{$space} {
-    @include respondTo(sm) {
+    .u-xs-mr-#{$space} {
       margin-right: #{$space}px;
     }
   }
+}
 
-  .u-xs-mt-#{$space} {
-    @include respondTo(xs) {
+@include respondTo(xxs) {
+  @each $space in $spacings {
+    .u-xxs-mt-#{$space} {
       margin-top: #{$space}px;
     }
-  }
-  .u-xs-mb-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-mb-#{$space} {
       margin-bottom: #{$space}px;
     }
-  }
-  .u-xs-ml-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-ml-#{$space} {
       margin-left: #{$space}px;
     }
-  }
-  .u-xs-mr-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-mr-#{$space} {
       margin-right: #{$space}px;
     }
   }
+}
 
-  .u-xxs-mt-#{$space} {
-    @include respondTo(xs) {
-      margin-top: #{$space}px;
-    }
-  }
-  .u-xxs-mb-#{$space} {
-    @include respondTo(xs) {
-      margin-bottom: #{$space}px;
-    }
-  }
-  .u-xxs-ml-#{$space} {
-    @include respondTo(xs) {
-      margin-left: #{$space}px;
-    }
-  }
-  .u-xxs-mr-#{$space} {
-    @include respondTo(xs) {
-      margin-right: #{$space}px;
-    }
-  }
-
+@each $space in $spacings {
   .u-pt-#{$space} {
     padding-top: #{$space}px;
   }
@@ -130,87 +95,71 @@
   .u-pr-#{$space} {
     padding-right: #{$space}px;
   }
+}
 
-  .u-md-pt-#{$space} {
-    @include respondTo(md) {
+@include respondTo(md) {
+  @each $space in $spacings {
+    .u-md-pt-#{$space} {
       padding-top: #{$space}px;
     }
-  }
-  .u-md-pb-#{$space} {
-    @include respondTo(md) {
+    .u-md-pb-#{$space} {
       padding-bottom: #{$space}px;
     }
-  }
-  .u-md-pl-#{$space} {
-    @include respondTo(md) {
+    .u-md-pl-#{$space} {
       padding-left: #{$space}px;
     }
-  }
-  .u-md-pr-#{$space} {
-    @include respondTo(md) {
+    .u-md-pr-#{$space} {
       padding-right: #{$space}px;
     }
   }
+}
 
-  .u-sm-pt-#{$space} {
-    @include respondTo(sm) {
+@include respondTo(sm) {
+  @each $space in $spacings {
+    .u-sm-pt-#{$space} {
       padding-top: #{$space}px;
     }
-  }
-  .u-sm-pb-#{$space} {
-    @include respondTo(sm) {
+    .u-sm-pb-#{$space} {
       padding-bottom: #{$space}px;
     }
-  }
-  .u-sm-pl-#{$space} {
-    @include respondTo(sm) {
+    .u-sm-pl-#{$space} {
       padding-left: #{$space}px;
     }
-  }
-  .u-sm-pr-#{$space} {
-    @include respondTo(sm) {
+    .u-sm-pr-#{$space} {
       padding-right: #{$space}px;
     }
   }
+}
 
-  .u-xs-pt-#{$space} {
-    @include respondTo(xs) {
+@include respondTo(xs) {
+  @each $space in $spacings {
+    .u-xs-pt-#{$space} {
       padding-top: #{$space}px;
     }
-  }
-  .u-xs-pb-#{$space} {
-    @include respondTo(xs) {
+    .u-xs-pb-#{$space} {
       padding-bottom: #{$space}px;
     }
-  }
-  .u-xs-pl-#{$space} {
-    @include respondTo(xs) {
+    .u-xs-pl-#{$space} {
       padding-left: #{$space}px;
     }
-  }
-  .u-xs-pr-#{$space} {
-    @include respondTo(xs) {
+    .u-xs-pr-#{$space} {
       padding-right: #{$space}px;
     }
   }
+}
 
-  .u-xxs-pt-#{$space} {
-    @include respondTo(xs) {
+@include respondTo(xxs) {
+  @each $space in $spacings {
+    .u-xxs-pt-#{$space} {
       padding-top: #{$space}px;
     }
-  }
-  .u-xxs-pb-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-pb-#{$space} {
       padding-bottom: #{$space}px;
     }
-  }
-  .u-xxs-pl-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-pl-#{$space} {
       padding-left: #{$space}px;
     }
-  }
-  .u-xxs-pr-#{$space} {
-    @include respondTo(xs) {
+    .u-xxs-pr-#{$space} {
       padding-right: #{$space}px;
     }
   }

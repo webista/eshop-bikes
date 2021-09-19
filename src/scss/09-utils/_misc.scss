@@ -12,31 +12,29 @@
   height: auto;
 }
 
-// Layout
-.u-display-block {
-  display: block;
-}
+// Display classes
+$display: none, block, inline-block, flex, inline-flex;
 
-.u-display-inline-block {
-  display: inline-block;
-}
-
-.u-va-middle {
-  vertical-align: middle;
-}
-
-.u-display-flex {
-  display: flex;
-}
-
-.u-xs-display-flex {
-  @include respondTo(xs) {
-    display: flex;
+@each $val in $display {
+  .u-display-#{$val} {
+    display: $val;
   }
 }
 
-.u-display-inline-flex {
-  display: inline-flex;
+@include respondTo(sm) {
+  @each $val in $display {
+    .u-sm-display-#{$val} {
+      display: $val;
+    }
+  }
+}
+
+@include respondTo(xs) {
+  @each $val in $display {
+    .u-xs-display-#{$val} {
+      display: $val;
+    }
+  }
 }
 
 .u-flex-column {
@@ -55,16 +53,6 @@
   }
 }
 
-.u-display-none {
-  display: none;
-}
-
-.u-xs-display-none {
-  @include respondTo(xs) {
-    display: none;
-  }
-}
-
 .u-flex-wrap {
   flex-wrap: wrap;
 }
@@ -77,94 +65,90 @@
   flex-grow: 1;
 }
 
-.u-justify-center {
-  justify-content: center;
-}
+// Justify content classes
+$justify-content: flex-start, flex-end, center, space-between, space-around;
 
-.u-justify-space-between {
-  justify-content: space-between;
-}
-
-.u-sm-justify-start {
-  @include respondTo(sm) {
-    justify-content: flex-start;
+@each $val in $justify-content {
+  .u-justify-#{$val} {
+    justify-content: $val;
   }
 }
 
-.u-sm-justify-end {
-  @include respondTo(sm) {
-    justify-content: flex-end;
+@include respondTo(sm) {
+  @each $val in $justify-content {
+    .u-sm-justify-#{$val} {
+      justify-content: $val;
+    }
   }
 }
 
-.u-xs-justify-start {
-  @include respondTo(xs) {
-    justify-content: flex-start;
+@include respondTo(xs) {
+  @each $val in $justify-content {
+    .u-xs-justify-#{$val} {
+      justify-content: $val;
+    }
   }
 }
 
-.u-xs-justify-end {
-  @include respondTo(xs) {
-    justify-content: flex-end;
+// Align items classes
+$align-items: flex-start, flex-end, center, stretch;
+
+@each $val in $align-items {
+  .u-align-items-#{$val} {
+    align-items: $val;
   }
 }
 
-.u-align-items-center {
-  align-items: center;
-}
-
-.u-xs-align-items-center {
-  @include respondTo(xs) {
-    align-items: center;
+@include respondTo(sm) {
+  @each $val in $align-items {
+    .u-sm-align-items-#{$val} {
+      align-items: $val;
+    }
   }
 }
 
-.u-align-items-start {
-  align-items: flex-start;
-}
-
-.u-sm-align-items-start {
-  @include respondTo(sm) {
-    align-items: flex-start;
+@include respondTo(xs) {
+  @each $val in $align-items {
+    .u-xs-align-items-#{$val} {
+      align-items: $val;
+    }
   }
 }
 
-.u-xs-align-items-start {
-  @include respondTo(xs) {
-    align-items: flex-start;
+// Order classes
+$order: 1, 2, 3, 4, 5;
+
+@each $val in $order {
+  .u-order-#{$val} {
+    order: $val;
   }
 }
 
-.u-align-items-end {
-  align-items: flex-end;
-}
-
-.u-md-order-1 {
-  @include respondTo(md) {
-    order: 1;
+@include respondTo(sm) {
+  @each $val in $order {
+    .u-sm-order-#{$val} {
+      order: $val;
+    }
   }
 }
 
-.u-md-order-2 {
-  @include respondTo(md) {
-    order: 2;
+@include respondTo(xs) {
+  @each $val in $order {
+    .u-xs-order-#{$val} {
+      order: $val;
+    }
   }
 }
 
-.u-xs-order-1 {
-  @include respondTo(xs) {
-    order: 1;
-  }
-}
-
-.u-xs-order-2 {
-  @include respondTo(xs) {
-    order: 2;
-  }
-}
-
+// Height classes
 .u-height-100p {
   height: 100%;
+}
+
+.u-sm-height-100p {
+  @include respondTo(sm) {
+    height: 100%;
+  }
 }
 
 .u-xs-height-100p {
@@ -173,6 +157,7 @@
   }
 }
 
+// Width classes
 .u-width-100p {
   width: 100%;
 }
@@ -208,34 +193,28 @@
   z-index: 1;
 }
 
-// Text formatting
-.u-ta-center {
-  text-align: center;
-}
+// Text align classes
+$text-align: left, right, center;
 
-.u-ta-left {
-  text-align: left;
-}
-
-.u-ta-right {
-  text-align: right;
-}
-
-.u-md-ta-center {
-  @include respondTo(md) {
-    text-align: center;
+@each $val in $text-align {
+  .u-ta-#{$val} {
+    text-align: $val;
   }
 }
 
-.u-sm-ta-center {
-  @include respondTo(sm) {
-    text-align: center;
+@include respondTo(sm) {
+  @each $val in $text-align {
+    .u-sm-ta-#{$val} {
+      text-align: $val;
+    }
   }
 }
 
-.u-xs-ta-center {
-  @include respondTo(xs) {
-    text-align: center;
+@include respondTo(xs) {
+  @each $val in $text-align {
+    .u-xs-ta-#{$val} {
+      text-align: $val;
+    }
   }
 }
 
@@ -247,6 +226,7 @@
   font-weight: $semibold;
 }
 
+// Line height classes
 .u-lh-1_25 {
   line-height: 1.25rem;
 }
@@ -267,7 +247,7 @@
   white-space: nowrap;
 }
 
-// Borders
+// Border classes
 .u-border {
   border: 1px solid $colorGrey;
 }

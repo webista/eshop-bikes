@@ -10,62 +10,38 @@ $cols: 12;
   &-col {
     position: relative;
     padding: 0 1rem;
+  }
 
-    &--3 {
-      flex: 0 0 percentage(3 / $cols);
-      max-width: percentage(3 / $cols);
+  @for $i from 1 through $cols {
+    .Grid-col--#{$i} {
+      flex: 0 0 percentage($i / $cols);
+      max-width: percentage($i / $cols);
     }
+  }
 
-    &--4 {
-      flex: 0 0 percentage(4 / $cols);
-      max-width: percentage(4 / $cols);
-    }
-
-    &--6 {
-      flex: 0 0 percentage(6 / $cols);
-      max-width: percentage(6 / $cols);
-    }
-
-    &--8 {
-      flex: 0 0 percentage(8 / $cols);
-      max-width: percentage(8 / $cols);
-    }
-
-    &--9 {
-      flex: 0 0 percentage(9 / $cols);
-      max-width: percentage(9 / $cols);
-    }
-
-    &--12 {
-      flex: 0 0 percentage(12 / $cols);
-      max-width: percentage(12 / $cols);
-    }
-
-    @include respondTo(md) {
-      &--md-6 {
-        flex: 0 0 percentage(6 / $cols);
-        max-width: percentage(6 / $cols);
+  @include respondTo(md) {
+    @for $i from 1 through $cols {
+      .Grid-col--md-#{$i} {
+        flex: 0 0 percentage($i / $cols);
+        max-width: percentage($i / $cols);
       }
     }
+  }
 
-    @include respondTo(md) {
-      &--md-12 {
-        flex: 0 0 percentage(12 / $cols);
-        max-width: percentage(12 / $cols);
+  @include respondTo(sm) {
+    @for $i from 1 through $cols {
+      .Grid-col--sm-#{$i} {
+        flex: 0 0 percentage($i / $cols);
+        max-width: percentage($i / $cols);
       }
     }
+  }
 
-    @include respondTo(sm) {
-      &--sm-12 {
-        flex: 0 0 percentage(12 / $cols);
-        max-width: percentage(12 / $cols);
-      }
-    }
-
-    @include respondTo(xs) {
-      &--xs-12 {
-        flex: 0 0 percentage(12 / $cols);
-        max-width: percentage(12 / $cols);
+  @include respondTo(xs) {
+    @for $i from 1 through $cols {
+      .Grid-col--xs-#{$i} {
+        flex: 0 0 percentage($i / $cols);
+        max-width: percentage($i / $cols);
       }
     }
   }
